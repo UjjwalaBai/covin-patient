@@ -210,9 +210,7 @@ const CovidHistory = ({
             <label>Date of diagnosis</label>
 
             <DropdownDate
-              selectedDate={moment(intakeState.dateCovidBefore).format(
-                "YYYY-MM-D"
-              )}
+              selectedDate={moment(intakeState.dateCovidBefore).format(DATE_FORMAT.yyyymmdd)}
               startDate={"2019-01-01"}
               endDate={new Date()}
               ids={{
@@ -266,7 +264,7 @@ const CovidHistory = ({
                 <DropdownDate
                   selectedDate={moment(
                     intakeState?.history?.field || getValue(history.field)
-                  ).format("YYYY-MM-D")}
+                  ).format(DATE_FORMAT.yyyymmdd)}
                   startDate={"2020-08-01"}
                   endDate={new Date()}
                   ids={{
