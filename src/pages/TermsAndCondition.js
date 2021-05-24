@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import * as patientService from "../services/patient";
+import TermsAndConditionPDF from './TermAndConditionPDF';
+import term_and_condition from '../assets/docs/Curizmo_Terms_and_Conditions.pdf'
+import { Link } from 'react-router-dom'
 import "../App.css";
 import "./home.css";
 import patient_profile from "../assets/images/icon_userprofile.svg";
 
-const TermsAndCondition = ({ setIsAgreed, name, phone, patientId }) => {
+const TermsAndCondition = ({ setIsAgreed, name, phone, patientId, hashKey }) => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleOnChange = (event) => {
@@ -37,10 +40,15 @@ const TermsAndCondition = ({ setIsAgreed, name, phone, patientId }) => {
             onChange={handleOnChange}
           />
           <label>
-            I agree to the<span> </span>
-            <a href="https://drive.google.com/file/d/1WTSvbfnI3BDjeoAfn-HVyHrqcm3AiiXR/view?usp=sharing" className="link-text">
-              terms and conditions
-            </a> of the usage this system
+            I agree to the 
+            <Link
+              to={{
+                pathname: "/",
+                hash: {hashKey},
+              }}
+              component={TermsAndConditionPDF}
+            />
+            of the usage this system  
           </label>
           <span className="checkmark"></span>
         </div>
