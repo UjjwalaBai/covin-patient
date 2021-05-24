@@ -40,7 +40,7 @@ const PatientIntakeForm = () => {
         <>
           {patientDetails.messageType === "newPatient" ? (
             <>
-              {/* {!isAgreed && ( */}
+              {!isAgreed && (
                 <TermsAndCondition
                   setIsAgreed={setIsAgreed}
                   name={patientDetails.givenName}
@@ -48,7 +48,7 @@ const PatientIntakeForm = () => {
                   patientId={patientDetails.patientId}
                   hashKey={hashKey}
                 />
-              {/* )}
+              )}
               {isAgreed && !isLoading && (
                 <PatientVitals
                   name={`${patientDetails.givenName} ${patientDetails.familyName}`}
@@ -58,7 +58,7 @@ const PatientIntakeForm = () => {
                   messageType={patientDetails.messageType}
                   intakeForm={intakeForm}
                 />
-              )} */}
+              )} 
             </>
           ) : (
             <>
