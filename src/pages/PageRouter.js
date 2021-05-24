@@ -3,7 +3,6 @@ import PatientIntakeForm from "./PatientIntakeForm";
 import FileDownload from "./FileDownload";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import TermsAndConditionPDF from "./TermAndConditionPDF";
-import TermAndCondition from "./TermsAndCondition";
 
 const PageRouter = () => {
   return (

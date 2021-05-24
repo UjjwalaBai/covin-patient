@@ -711,13 +711,17 @@ textarea:focus {
 }
 
 .pdf-wrap{
-  height: 75%;
   overflow: auto;
 }
-.pdf-buttons{
+
+.back-wrap{
   padding: 1rem;
-  align-items: center;
-  justify-content: space-between;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 99;
 }
 
 canvas.react-pdf__Page__canvas {
@@ -733,42 +737,9 @@ canvas.react-pdf__Page__canvas {
   height: 100% !important;
 }
 
-.pdf-button{
-  background-color: #54b8b1;
+.back-button{
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: #ccc;
-  border-radius: 0.2rem;
-  border: none;
-  box-shadow: 0px 3px 0px #008484;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 0.85rem;
-  line-height: 1.2rem;
-  letter-spacing: 0.2em;
-  color: #ffffff;
-  height: 3.5rem;
-  margin-top: 10px;
-}
-
-.prev-next-button{
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.prev-button{
-  width: 45%;
-}
-
-.next-button{
-  width: 45%;
-}
-
-.back-button{
-  width: 100%;
 }
 
 .container-class select {
