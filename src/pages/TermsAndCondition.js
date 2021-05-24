@@ -1,13 +1,19 @@
 import React, { useState } from "react";
 import * as patientService from "../services/patient";
-import TermsAndConditionPDF from './TermAndConditionPDF';
-import term_and_condition from '../assets/docs/Curizmo_Terms_and_Conditions.pdf'
-import { Link } from 'react-router-dom'
+import TermsAndConditionPDF from "./TermAndConditionPDF";
+import term_and_condition from "../assets/docs/Curizmo_Terms_and_Conditions.pdf";
+import { Link } from "react-router-dom";
 import "../App.css";
 import "./home.css";
 import patient_profile from "../assets/images/icon_userprofile.svg";
 
-const TermsAndCondition = ({ setIsAgreed, name, phone, patientId, hashKey }) => {
+const TermsAndCondition = ({
+  setIsAgreed,
+  name,
+  phone,
+  patientId,
+  hashKey,
+}) => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleOnChange = (event) => {
@@ -30,7 +36,9 @@ const TermsAndCondition = ({ setIsAgreed, name, phone, patientId, hashKey }) => 
         <span className="dull-text">{phone}</span>
       </div>
       <div className="thanks-message">
-        <span className="thanks-text">Thank you for giving us the opportunity to serve you.</span>
+        <span className="thanks-text">
+          Thank you for giving us the opportunity to serve you.
+        </span>
       </div>
       <div className="initial-page-content">
         <div className="page-alert">
@@ -40,15 +48,9 @@ const TermsAndCondition = ({ setIsAgreed, name, phone, patientId, hashKey }) => 
             onChange={handleOnChange}
           />
           <label>
-            I agree to the 
-            <Link
-              to={{
-                pathname: "/",
-                hash: {hashKey},
-              }}
-              component={TermsAndConditionPDF}
-            />
-            of the usage this system  
+            I agree to the
+            <Link to="/pdfPage">Terms and Conditions</Link>
+            of the usage this system
           </label>
           <span className="checkmark"></span>
         </div>
