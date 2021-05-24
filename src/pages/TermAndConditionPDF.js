@@ -16,7 +16,7 @@ const TermsAndConditionPDF = (props) => {
   };
 
   const goBack = () => {
-    history.push(`/${props.location.hashKey}/`);
+    history.push(`/${props?.location?.hashKey}`);
   };
 
   return (
