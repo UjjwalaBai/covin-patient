@@ -9,7 +9,7 @@ const PageRouter = () => {
     <Router>
       <div>
         <Switch>
-          <Route exact path="/pdfPage" component={TermsAndConditionPDF} />
+          <Route exact path="/termsAndConditions" component={TermsAndConditionPDF} />
           <Route exact path="/file/:container/:file" component={FileDownload} />
           <Route path="/:hashKey" component={PatientIntakeForm} />
         </Switch>

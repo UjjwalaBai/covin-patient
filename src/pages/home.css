@@ -711,10 +711,11 @@ textarea:focus {
 }
 
 .pdf-wrap{
-  overflow: auto;
+  overflow-x: clip;
+  
 }
 
-.back-wrap{
+.back-wrap-tnc{
   padding: 1rem;
   background-color: #ffffff;
   position: fixed;
@@ -722,6 +723,8 @@ textarea:focus {
   width: 100%;
   left: 0;
   z-index: 99;
+  color: #9099AF;
+  font-size: 0.85rem;
 }
 
 canvas.react-pdf__Page__canvas {
@@ -737,7 +740,7 @@ canvas.react-pdf__Page__canvas {
   height: 100% !important;
 }
 
-.back-button{
+.back-button-tnc{
   display: flex;
   align-items: center;
 }

@@ -20,8 +20,8 @@ const TermsAndConditionPDF = (props) => {
 
   return (
     <div>
-        <div className="back-wrap">
-            <div className="back-button" onClick={goBack}>
+        <div className="back-wrap-tnc">
+            <div className="back-button-tnc" onClick={goBack}>
               <img className="nav-img-back" src={back} alt="go back"></img>
               <span>Back</span>
             </div>

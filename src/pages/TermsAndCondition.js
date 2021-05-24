@@ -50,7 +50,7 @@ const TermsAndCondition = ({
             I agree to the<span> </span>
             <Link
               to={{
-                pathname: "/pdfPage",
+                pathname: "/termsAndConditions",
                 hashKey: hashKey,
               }}
               className="link-text"
