@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import * as patientService from "../services/patient";
 import TermsAndConditionPDF from "./TermAndConditionPDF";
-import term_and_condition from "../assets/docs/Curizmo_Terms_and_Conditions.pdf";
 import { Link } from "react-router-dom";
 import "../App.css";
 import "./home.css";
@@ -48,8 +47,10 @@ const TermsAndCondition = ({
             onChange={handleOnChange}
           />
           <label>
-            I agree to the
-            <Link to="/pdfPage">Terms and Conditions</Link>
+            I agree to the<span> </span>
+            <Link to="/pdfPage" className="link-text">
+              Terms and Conditions
+            </Link><span> </span>
             of the usage this system
           </label>
           <span className="checkmark"></span>
