@@ -48,9 +48,16 @@ const TermsAndCondition = ({
           />
           <label>
             I agree to the<span> </span>
-            <Link to="/pdfPage" className="link-text">
+            <Link
+              to={{
+                pathname: "/pdfPage",
+                hashKey: hashKey,
+              }}
+              className="link-text"
+            >
               Terms and Conditions
-            </Link><span> </span>
+            </Link>
+            <span> </span>
             of the usage this system
           </label>
           <span className="checkmark"></span>
