@@ -8,6 +8,7 @@ import back from "../assets/images/back.svg";
 const TermsAndConditionPDF = (props) => {
   pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
   const [numPages, setNumPages] = useState(null);
+
   const history = useHistory();
 
   const onDocumentLoadSuccess = (numPages) => {
@@ -20,21 +21,24 @@ const TermsAndConditionPDF = (props) => {
 
   return (
     <div>
-        <div className="back-wrap">
-            <div className="back-button" onClick={goBack}>
-              <img className="nav-img-back" src={back} alt="go back"></img>
-              <span>Back</span>
-            </div>
+      <div className="back-wrap">
+        <div className="back-button" onClick={goBack}>
+          <img className="nav-img-back" src={back} alt="go back"></img>
+          <span>Back</span>
         </div>
+      </div>
       <div className="pdf-wrap">
         <Document
           file={term_and_condition}
           options={{ workerSrc: "/pdf.worker.js" }}
-          onLoadSuccess={({ numPages })=>onDocumentLoadSuccess(numPages)}
+          onLoadSuccess={({ numPages }) => onDocumentLoadSuccess(numPages)}
+          loading={<div></div>}
         >
           {Array.apply(null, Array(numPages))
-            .map((x, i)=>i+1)
-            .map(page => <Page pageNumber={page}/>)}
+            .map((x, i) => i + 1)
+            .map((page) => (
+              <Page loading={<div></div>} pageNumber={page} />
+            ))}
         </Document>
       </div>
     </div>
