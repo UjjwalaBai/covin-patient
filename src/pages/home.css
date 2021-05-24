@@ -734,6 +734,7 @@ canvas.react-pdf__Page__canvas {
 
 .react-pdf__Page {
   height: 100% !important;
+  margin-bottom: 1rem;
 }
 
 .react-pdf__Document {
@@ -956,4 +957,8 @@ canvas.react-pdf__Page__canvas {
       -1.8em 1.8em 0 0em rgba(47, 64, 104, 0.5),
       -2.6em 0em 0 0em rgba(47, 64, 104, 0.7), -1.8em -1.8em 0 0em #2f4068;
   }
+}
+
+.linkAnnotation {
+  display: none;
 }
